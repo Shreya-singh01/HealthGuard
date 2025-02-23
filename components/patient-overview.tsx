@@ -1,40 +1,4 @@
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-// import { cn } from "@/lib/utils"
 
-// interface PatientOverviewProps {
-//   className?: string
-// }
-
-// export function PatientOverview({ className }: PatientOverviewProps) {
-//   return (
-//     <Card className={cn("col-span-4", className)}>
-//       <CardHeader>
-//         <CardTitle>Patient Overview</CardTitle>
-//         <CardDescription>Current patient status and history</CardDescription>
-//       </CardHeader>
-//       <CardContent>
-//         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-//           <div className="space-y-2">
-//             <p className="text-sm font-medium text-muted-foreground">Patient ID</p>
-//             <p className="text-2xl font-bold">256</p>
-//           </div>
-//           <div className="space-y-2">
-//             <p className="text-sm font-medium text-muted-foreground">Active Monitoring</p>
-//             <p className="text-2xl font-bold">42</p>
-//           </div>
-//           <div className="space-y-2">
-//             <p className="text-sm font-medium text-muted-foreground">Alerts Today</p>
-//             <p className="text-2xl font-bold">7</p>
-//           </div>
-//           <div className="space-y-2">
-//             <p className="text-sm font-medium text-muted-foreground">Critical Cases</p>
-//             <p className="text-2xl font-bold text-red-500">3</p>
-//           </div>
-//         </div>
-//       </CardContent>
-//     </Card>
-//   )
-// }
 "use client";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -53,9 +17,9 @@ export function PatientOverview({ className }: PatientOverviewProps) {
 
 
   useEffect(() => {
-    // Initially no anomaly detected
+
     const timer = setTimeout(() => {
-      // Simulate an anomaly after 5 seconds
+ 
       setAnomalyDetected(true)
       setPossibleDiseases(["Tachycardia", "Hypertension", "Stress-induced Arrhythmia"])
       setRecommendations([
@@ -64,9 +28,8 @@ export function PatientOverview({ className }: PatientOverviewProps) {
         "Monitor for recurring episodes",
       ])
       setCriticalAlert(true)
-    }, 5000) // 5-second delay for simulation
+    }, 9000) 
 
-    // Cleanup the timer when the component unmounts
     return () => clearTimeout(timer)
   }, [])
 
